@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    let imageLogic = AppLogic()
     
     @IBOutlet weak var mpgLabel: UILabel!
     @IBOutlet weak var distanceLabel: UILabel!
@@ -35,13 +36,22 @@ class ViewController: UIViewController {
         for (i, buttonModifier) in buttonModifier.enumerated() {
             buttonModifier.index = i
         }
+        imageLogic.initModifier(with: buttonModifier.count)
     }
     
     
-    @IBAction func whenTapped(_ sender:
-        EmojiFilter) {
-        buttonModifier[sender.index] = emojiCycle(sender.index)
+    @IBAction func whenTapped(_ sender: EmojiFilter) {
+        imageLogic.emojiCycle(for: sender.index)
         print("title \(sender.index) tapped")
+        updateAll()
+    }
+    
+    func updateAll(){
+        for image in buttonModifier {
+            if let temp = imageLogic.getEmoji(for: image.index) {
+                image.setTitle(temp, for: .normal)
+            }
+        }
     }
     
     
@@ -50,15 +60,24 @@ class ViewController: UIViewController {
         if (setupStage == 0){
             inputMPG.resignFirstResponder()
             inputDistance.becomeFirstResponder()
+            imageLogic.mpg = Int(inputMPG.text!)!
             setupStage+=1
-            print(inputMPG.text!)
+            updateAll()
         }else if(setupStage == 1){
             inputDistance.resignFirstResponder()
+            inputSize.becomeFirstResponder()
+            imageLogic.distance = Int(inputDistance.text!)!
             setupStage+=1
-            print(inputDistance.text!)
+            updateAll()
+        }else if(setupStage == 2){
+            imageLogic.size = Int(inputSize.text!)!
+            inputSize.resignFirstResponder()
+            updateAll()
         }else{
-            mpgLabel.resignFirstResponder()
-            print(inputSize!)
+            imageLogic.mpg = Int(inputDistance.text!)!
+            imageLogic.distance = Int(inputMPG.text!)!
+            imageLogic.size = Int(inputSize.text!)!
+            updateAll()
         }
     }
 }

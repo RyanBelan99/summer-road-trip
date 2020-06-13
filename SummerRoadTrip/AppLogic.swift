@@ -15,18 +15,20 @@ struct Image {
 
 class AppLogic {
     private var imageArray = [Image]()
-    var position = 0
+    var mpg = 0
+    var distance = 0
+    var size = 0
     
     
     func initModifier(with numberOfImages: Int){
         for _ in 0..<numberOfImages {
-            let image = Image(modifier: false, emoji: "")
+            let image = Image(modifier: false, emoji: "❌")
             imageArray.append(image)
         }
     }
     
     func emojiCycle(for index: Int) {
-        if(imageArray[index].emoji == ""){
+        if(imageArray[index].emoji == "❌"){
             imageArray[index].modifier = true
             imageArray[index].emoji = "🏬"
         }else if(imageArray[index].emoji == "🏬"){
@@ -34,14 +36,14 @@ class AppLogic {
         }else if(imageArray[index].emoji == "🏔"){
             imageArray[index].emoji = "🏜"
         }else if(imageArray[index].emoji == "🏜"){
-            imageArray[index].emoji = ""
+            imageArray[index].emoji = "❌"
             imageArray[index].modifier = false
         }
     }
     
     
     func getEmoji(for index: Int) -> String? {
-        return imageArray[index].modifier ? imageArray[index].emoji : ""
+        return imageArray[index].modifier ? imageArray[index].emoji : "❌"
     }
     
 }

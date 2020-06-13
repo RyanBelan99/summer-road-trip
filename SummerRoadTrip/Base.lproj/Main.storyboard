@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,224 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SummerRoadTrip" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SummerRoadTrip" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rBM-4A-3I6">
+                                <rect key="frame" x="125" y="53" width="165" height="23"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="19"/>
+                                <color key="textColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MPG:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eCe-JR-Z8u">
+                                <rect key="frame" x="29" y="96" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fuel Tank Size:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w0Z-rJ-GsG">
+                                <rect key="frame" x="29" y="175" width="114" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance Traveled:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V2d-H0-S6m">
+                                <rect key="frame" x="29" y="135.5" width="141" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kW5-3b-jZf">
+                                <rect key="frame" x="193" y="84" width="83" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="83" id="Rvk-mI-jbK"/>
+                                    <constraint firstAttribute="width" constant="83" id="Rzz-81-BLA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="optional" borderStyle="roundedRect" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZpQ-U4-8ub">
+                                <rect key="frame" x="193" y="174" width="83" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="83" id="h2F-rd-EH4"/>
+                                </constraints>
+                                <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ymJ-3t-i76">
+                                <rect key="frame" x="193" y="129" width="83" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="83" id="hd1-AK-gyN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="nKv-9U-o71">
+                                <rect key="frame" x="29" y="681.5" width="163" height="101.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of Stops: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dL9-VR-oZ6">
+                                        <rect key="frame" x="0.0" y="0.0" width="163" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total gas consumed: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9NV-pd-xSP">
+                                        <rect key="frame" x="0.0" y="40.5" width="163" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recommend trip:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FmK-UB-S7o">
+                                        <rect key="frame" x="0.0" y="81" width="163" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="Mf8-Rv-20e">
+                                <rect key="frame" x="29" y="237" width="345" height="84"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vy3-Kb-Zt6" customClass="EmojiFilter" customModule="SummerRoadTrip" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="84" height="84"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="vy3-Kb-Zt6" secondAttribute="height" multiplier="1:1" id="pV8-7C-5I4"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                        <state key="normal" title="❌"/>
+                                        <connections>
+                                            <action selector="whenTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BbM-SY-Qg2"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RCj-tK-v2s" customClass="EmojiFilter" customModule="SummerRoadTrip" customModuleProvider="target">
+                                        <rect key="frame" x="87" y="0.0" width="84" height="84"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="RCj-tK-v2s" secondAttribute="height" multiplier="1:1" id="pnE-K0-cZY"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                        <state key="normal" title="❌"/>
+                                        <connections>
+                                            <action selector="whenTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iIg-oX-9Ha"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kN8-ED-eMf" customClass="EmojiFilter" customModule="SummerRoadTrip" customModuleProvider="target">
+                                        <rect key="frame" x="174" y="0.0" width="84" height="84"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="kN8-ED-eMf" secondAttribute="height" multiplier="1:1" id="88F-Ns-QB2"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                        <state key="normal" title="❌"/>
+                                        <connections>
+                                            <action selector="whenTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4es-Ei-P44"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bsg-0A-Jcy" customClass="EmojiFilter" customModule="SummerRoadTrip" customModuleProvider="target">
+                                        <rect key="frame" x="261" y="0.0" width="84" height="84"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Bsg-0A-Jcy" secondAttribute="height" multiplier="1:1" id="Zb0-LH-GRg"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                        <state key="normal" title="❌"/>
+                                        <connections>
+                                            <action selector="whenTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Vt-LD-PgX"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Bsg-0A-Jcy" firstAttribute="width" secondItem="Bsg-0A-Jcy" secondAttribute="height" multiplier="1:1" id="LHk-qM-EMk"/>
+                                    <constraint firstItem="kN8-ED-eMf" firstAttribute="width" secondItem="kN8-ED-eMf" secondAttribute="height" multiplier="1:1" id="VRx-Zs-CiD"/>
+                                    <constraint firstItem="Bsg-0A-Jcy" firstAttribute="width" secondItem="Bsg-0A-Jcy" secondAttribute="height" multiplier="1:1" id="fnz-yC-wCl"/>
+                                    <constraint firstItem="kN8-ED-eMf" firstAttribute="width" secondItem="kN8-ED-eMf" secondAttribute="height" multiplier="1:1" id="lKG-Dr-csC"/>
+                                    <constraint firstItem="RCj-tK-v2s" firstAttribute="width" secondItem="RCj-tK-v2s" secondAttribute="height" multiplier="1:1" id="lRW-pb-tcQ"/>
+                                    <constraint firstItem="Bsg-0A-Jcy" firstAttribute="width" secondItem="Bsg-0A-Jcy" secondAttribute="height" multiplier="1:1" id="qG3-i9-Ia6"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="8Eo-S1-hpV">
+                                <rect key="frame" x="210" y="681" width="23" height="101.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ib4-oq-fT0">
+                                        <rect key="frame" x="0.0" y="0.0" width="23" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ipd-zG-FjC">
+                                        <rect key="frame" x="0.0" y="40.5" width="23" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="👍" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lN6-rN-JTT">
+                                        <rect key="frame" x="0.0" y="81" width="23" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="w0Z-rJ-GsG" firstAttribute="top" secondItem="V2d-H0-S6m" secondAttribute="bottom" constant="19" id="2AY-Lm-zvI"/>
+                            <constraint firstItem="ymJ-3t-i76" firstAttribute="top" secondItem="kW5-3b-jZf" secondAttribute="bottom" constant="11" id="98C-qU-597"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rBM-4A-3I6" secondAttribute="trailing" constant="124" id="9OL-Qd-THd"/>
+                            <constraint firstItem="V2d-H0-S6m" firstAttribute="top" secondItem="eCe-JR-Z8u" secondAttribute="bottom" constant="19" id="GPC-WM-0pq"/>
+                            <constraint firstItem="rBM-4A-3I6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="9" id="Iq9-sD-VDu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="8Eo-S1-hpV" secondAttribute="bottom" constant="79.5" id="LOA-Oh-fwt"/>
+                            <constraint firstItem="V2d-H0-S6m" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="29" id="OD1-33-btl"/>
+                            <constraint firstItem="eCe-JR-Z8u" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="29" id="Pe0-xb-aRO"/>
+                            <constraint firstItem="Mf8-Rv-20e" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="193" id="ToN-po-uuT"/>
+                            <constraint firstItem="rBM-4A-3I6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="125" id="Ukh-5c-WsA"/>
+                            <constraint firstItem="ZpQ-U4-8ub" firstAttribute="top" secondItem="ymJ-3t-i76" secondAttribute="bottom" constant="11" id="VgX-be-i2e"/>
+                            <constraint firstItem="V2d-H0-S6m" firstAttribute="top" secondItem="eCe-JR-Z8u" secondAttribute="bottom" constant="19" id="WVq-Ob-wz7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Mf8-Rv-20e" secondAttribute="trailing" constant="40" id="XU0-tQ-y7U"/>
+                            <constraint firstItem="w0Z-rJ-GsG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="29" id="ZXh-44-AXR"/>
+                            <constraint firstItem="eCe-JR-Z8u" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="52" id="Zy0-k7-1og"/>
+                            <constraint firstItem="kW5-3b-jZf" firstAttribute="leading" secondItem="eCe-JR-Z8u" secondAttribute="trailing" constant="122" id="a7K-lf-jBr"/>
+                            <constraint firstItem="ZpQ-U4-8ub" firstAttribute="leading" secondItem="w0Z-rJ-GsG" secondAttribute="trailing" constant="50" id="aZR-da-Hol"/>
+                            <constraint firstItem="kW5-3b-jZf" firstAttribute="top" secondItem="rBM-4A-3I6" secondAttribute="bottom" constant="8" id="eHg-f7-FV4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="nKv-9U-o71" secondAttribute="bottom" constant="79" id="ffP-A1-0EM"/>
+                            <constraint firstItem="8Eo-S1-hpV" firstAttribute="leading" secondItem="nKv-9U-o71" secondAttribute="trailing" constant="18" id="gbU-Lt-Xjd"/>
+                            <constraint firstItem="nKv-9U-o71" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="29" id="mHk-fv-EtE"/>
+                            <constraint firstItem="ymJ-3t-i76" firstAttribute="leading" secondItem="V2d-H0-S6m" secondAttribute="trailing" constant="23" id="pBW-Gt-oJX"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="VCk-Pn-EDH" appends="YES" id="BK2-gV-I7Y"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="distanceLabel" destination="V2d-H0-S6m" id="bMo-wm-8JA"/>
+                        <outlet property="fuelSizeLabel" destination="w0Z-rJ-GsG" id="cKk-st-V35"/>
+                        <outlet property="inputDistance" destination="ymJ-3t-i76" id="bHE-C3-cys"/>
+                        <outlet property="inputMPG" destination="kW5-3b-jZf" id="MO3-Bj-rhN"/>
+                        <outlet property="inputSize" destination="ZpQ-U4-8ub" id="Vgb-bS-bw0"/>
+                        <outlet property="mpgLabel" destination="eCe-JR-Z8u" id="faY-Qm-N11"/>
+                        <outlet property="outputRecommendation" destination="FmK-UB-S7o" id="vUz-cd-8VO"/>
+                        <outlet property="outputRecommendationEdit" destination="lN6-rN-JTT" id="P4D-yc-K6L"/>
+                        <outlet property="outputStopEdit" destination="ib4-oq-fT0" id="Y13-RS-xGR"/>
+                        <outlet property="outputStops" destination="dL9-VR-oZ6" id="AoX-f5-lms"/>
+                        <outlet property="outputTotal" destination="9NV-pd-xSP" id="u4O-6c-Fik"/>
+                        <outlet property="outputTotalEdit" destination="Ipd-zG-FjC" id="tBN-U0-fyh"/>
+                        <outletCollection property="buttonModifier" destination="vy3-Kb-Zt6" collectionClass="NSMutableArray" id="qve-qV-ZuW"/>
+                        <outletCollection property="buttonModifier" destination="vy3-Kb-Zt6" collectionClass="NSMutableArray" id="4hX-Ml-wEz"/>
+                        <outletCollection property="buttonModifier" destination="RCj-tK-v2s" collectionClass="NSMutableArray" id="baX-73-IwL"/>
+                        <outletCollection property="buttonModifier" destination="kN8-ED-eMf" collectionClass="NSMutableArray" id="mAj-Tt-wet"/>
+                        <outletCollection property="buttonModifier" destination="Bsg-0A-Jcy" collectionClass="NSMutableArray" id="z9F-h6-3xz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="VCk-Pn-EDH">
+                    <connections>
+                        <action selector="KeyboardTapWithSender:" destination="BYZ-38-t0r" id="vpw-qX-Me4"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
         </scene>
     </scenes>
 </document>

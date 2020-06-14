@@ -37,12 +37,12 @@ class ViewController: UIViewController {
             buttonModifier.index = i
         }
         imageLogic.initModifier(with: buttonModifier.count)
+        self.view.backgroundColor = UIColor.green
     }
     
     
     @IBAction func whenTapped(_ sender: EmojiFilter) {
         imageLogic.emojiCycle(for: sender.index)
-        print("title \(sender.index) tapped")
         updateAll()
     }
     
@@ -52,6 +52,16 @@ class ViewController: UIViewController {
                 image.setTitle(temp, for: .normal)
             }
         }
+        imageLogic.caclulate()
+        outputStopEdit.text = String(imageLogic.outStops)
+        outputTotalEdit.text = String(imageLogic.outConsumed)
+        if(imageLogic.outStops > 4 || imageLogic.outConsumed > 100){
+            self.view.backgroundColor = UIColor.red
+            outputRecommendationEdit.text = "👎"
+        }else{
+            self.view.backgroundColor = UIColor.green
+            outputRecommendationEdit.text = "👍"
+        }
     }
     
     
@@ -60,23 +70,27 @@ class ViewController: UIViewController {
         if (setupStage == 0){
             inputMPG.resignFirstResponder()
             inputDistance.becomeFirstResponder()
-            imageLogic.mpg = Int(inputMPG.text!)!
+            imageLogic.mpg = Int(inputMPG.text!) ?? 0
             setupStage+=1
             updateAll()
         }else if(setupStage == 1){
             inputDistance.resignFirstResponder()
             inputSize.becomeFirstResponder()
-            imageLogic.distance = Int(inputDistance.text!)!
+            imageLogic.distance = Int(inputDistance.text!) ?? 0
             setupStage+=1
             updateAll()
         }else if(setupStage == 2){
-            imageLogic.size = Int(inputSize.text!)!
+            imageLogic.size = Int(inputSize.text!) ?? 0
             inputSize.resignFirstResponder()
+            setupStage+=1
             updateAll()
         }else{
-            imageLogic.mpg = Int(inputDistance.text!)!
-            imageLogic.distance = Int(inputMPG.text!)!
-            imageLogic.size = Int(inputSize.text!)!
+            inputSize.resignFirstResponder()
+            inputDistance.resignFirstResponder()
+            inputMPG.resignFirstResponder()
+            imageLogic.distance = Int(inputDistance.text!) ?? 0
+            imageLogic.mpg = Int(inputMPG.text!) ?? 0
+            imageLogic.size = Int(inputSize.text!) ?? 0
             updateAll()
         }
     }

@@ -40,7 +40,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kW5-3b-jZf">
-                                <rect key="frame" x="193" y="84" width="83" height="34"/>
+                                <rect key="frame" x="161" y="84" width="83" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="83" id="Rvk-mI-jbK"/>
                                     <constraint firstAttribute="width" constant="83" id="Rzz-81-BLA"/>
@@ -49,7 +49,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZpQ-U4-8ub">
-                                <rect key="frame" x="193" y="174" width="83" height="34"/>
+                                <rect key="frame" x="163" y="174" width="83" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="83" id="h2F-rd-EH4"/>
                                 </constraints>
@@ -58,7 +58,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ymJ-3t-i76">
-                                <rect key="frame" x="193" y="129" width="83" height="34"/>
+                                <rect key="frame" x="180" y="129" width="83" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="83" id="hd1-AK-gyN"/>
                                 </constraints>
@@ -187,13 +187,13 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Mf8-Rv-20e" secondAttribute="trailing" constant="40" id="XU0-tQ-y7U"/>
                             <constraint firstItem="w0Z-rJ-GsG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="29" id="ZXh-44-AXR"/>
                             <constraint firstItem="eCe-JR-Z8u" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="52" id="Zy0-k7-1og"/>
-                            <constraint firstItem="kW5-3b-jZf" firstAttribute="leading" secondItem="eCe-JR-Z8u" secondAttribute="trailing" constant="122" id="a7K-lf-jBr"/>
-                            <constraint firstItem="ZpQ-U4-8ub" firstAttribute="leading" secondItem="w0Z-rJ-GsG" secondAttribute="trailing" constant="50" id="aZR-da-Hol"/>
+                            <constraint firstItem="kW5-3b-jZf" firstAttribute="leading" secondItem="eCe-JR-Z8u" secondAttribute="trailing" constant="90" id="a7K-lf-jBr"/>
+                            <constraint firstItem="ZpQ-U4-8ub" firstAttribute="leading" secondItem="w0Z-rJ-GsG" secondAttribute="trailing" constant="20" id="aZR-da-Hol"/>
                             <constraint firstItem="kW5-3b-jZf" firstAttribute="top" secondItem="rBM-4A-3I6" secondAttribute="bottom" constant="8" id="eHg-f7-FV4"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="nKv-9U-o71" secondAttribute="bottom" constant="79" id="ffP-A1-0EM"/>
                             <constraint firstItem="8Eo-S1-hpV" firstAttribute="leading" secondItem="nKv-9U-o71" secondAttribute="trailing" constant="18" id="gbU-Lt-Xjd"/>
                             <constraint firstItem="nKv-9U-o71" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="29" id="mHk-fv-EtE"/>
-                            <constraint firstItem="ymJ-3t-i76" firstAttribute="leading" secondItem="V2d-H0-S6m" secondAttribute="trailing" constant="23" id="pBW-Gt-oJX"/>
+                            <constraint firstItem="ymJ-3t-i76" firstAttribute="leading" secondItem="V2d-H0-S6m" secondAttribute="trailing" constant="10" id="pBW-Gt-oJX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <connections>

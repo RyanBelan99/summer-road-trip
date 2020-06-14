@@ -10,8 +10,10 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    //calling Applogic class
     let imageLogic = AppLogic()
     
+    //UI variable names for UILabel & UITextField
     @IBOutlet weak var mpgLabel: UILabel!
     @IBOutlet weak var distanceLabel: UILabel!
     @IBOutlet weak var fuelSizeLabel: UILabel!
@@ -28,11 +30,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var outputTotalEdit: UILabel!
     @IBOutlet weak var outputRecommendationEdit: UILabel!
     
-    @IBOutlet var buttonModifier: [EmojiFilter]!
+    @IBOutlet var buttonModifier: [EmojiFilter]! //stack button array
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //localization
+        //localization keys 
         mpgLabel.text = NSLocalizedString("str_mpgLabel", comment: "")
         distanceLabel.text = NSLocalizedString("str_distanceLabel", comment: "")
         fuelSizeLabel.text = NSLocalizedString("str_fuelSizeLabel", comment: "")
@@ -40,20 +42,23 @@ class ViewController: UIViewController {
         outputTotal.text = NSLocalizedString("str_outputTotal", comment: "")
         outputRecommendation.text = NSLocalizedString("str_outputRecommendation", comment: "")
         
-        inputMPG.becomeFirstResponder()
+        inputMPG.becomeFirstResponder() //setting start up keyboard position
+        //giving stacked buttons an index
         for (i, buttonModifier) in buttonModifier.enumerated() {
             buttonModifier.index = i
         }
+        //initialing stack buttons and Applogic class
         imageLogic.initModifier(with: buttonModifier.count)
         self.view.backgroundColor = UIColor.green
     }
     
-    
+    //when activated update button viually and update results
     @IBAction func whenTapped(_ sender: EmojiFilter) {
         imageLogic.emojiCycle(for: sender.index)
         updateAll()
     }
     
+    //refreshes UI whenever there is a change and inputs calculation results from AppLogic
     func updateAll(){
         for image in buttonModifier {
             if let temp = imageLogic.getEmoji(for: image.index) {
@@ -72,7 +77,7 @@ class ViewController: UIViewController {
         }
     }
     
-    
+    //This method directs the keyboard to next required input. As well refeshes apps logic whenever an edit happends
     private var setupStage = 0
     @IBAction func KeyboardTap(sender: AnyObject) {
         if (setupStage == 0){

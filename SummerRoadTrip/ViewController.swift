@@ -32,6 +32,14 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //localization
+        mpgLabel.text = NSLocalizedString("str_mpgLabel", comment: "")
+        distanceLabel.text = NSLocalizedString("str_distanceLabel", comment: "")
+        fuelSizeLabel.text = NSLocalizedString("str_fuelSizeLabel", comment: "")
+        outputStops.text = NSLocalizedString("str_outputStops", comment: "")
+        outputTotal.text = NSLocalizedString("str_outputTotal", comment: "")
+        outputRecommendation.text = NSLocalizedString("str_outputRecommendation", comment: "")
+        
         inputMPG.becomeFirstResponder()
         for (i, buttonModifier) in buttonModifier.enumerated() {
             buttonModifier.index = i

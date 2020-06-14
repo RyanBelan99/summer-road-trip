@@ -5,3 +5,10 @@
   Created by Ryan Belan on 6/12/20.
   Copyright © 2020 University of Rochester. All rights reserved.
 */
+"str_mpgLabel" = "MPG:";
+"str_distanceLabel" = "Distance Traveled:";
+"str_fuelSizeLabel" = "Fuel Tank Size:";
+"str_outputStops" = "Number of Stops:";
+"str_outputTotal" = "Total Gas Consumed:";
+"str_outputRecommendation" = "Recommended Trip:";
+

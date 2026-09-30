@@ -51,14 +51,22 @@ class AppLogic {
         if((mpg==0 || distance==0 || size==0)){
             return
         }else{
-            var temp = mpg
+            // Work in Double throughout: the original code did Int division
+            // (Double(distance/temp)) which truncated the result, and a small
+            // mpg with large terrain modifiers could truncate `temp` to 0 and
+            // divide by zero.
+            var effectiveMpg = Double(mpg)
             if(imageArray.contains(where: {$0.modifier == true})){ //checks if there are any modifiers
-                temp = Int(Double(mpg)/getModifier())
+                effectiveMpg = Double(mpg)/getModifier()
             }
-            outConsumed = Double(distance/temp)
+            guard effectiveMpg > 0 else {
+                outConsumed = 0
+                outStops = 0
+                return
+            }
+            outConsumed = Double(distance)/effectiveMpg
             if(outConsumed >= Double(size)) {
-                outStops = outConsumed/Double(size)
-                outStops.round(.up)
+                outStops = (outConsumed/Double(size)).rounded(.up)
             }
         }
     }
